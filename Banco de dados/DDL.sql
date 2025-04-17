@@ -13,44 +13,45 @@ USE ECommerce
 
 --CREATE TABLE Cliente (
 --	IdCliente INT PRIMARY KEY IDENTITY,
---	NomeCompleto VARCHAR(150),
---	Email VARCHAR (100),
+--	NomeCompleto VARCHAR(150) NOT NULL,
+--	Email VARCHAR (100) NOT NULL UNIQUE,
 --	Telefone VARCHAR(20),
 --	Endereco VARCHAR(255),
+--	Senha VARCHAR(255) NOT NULL,
 --	DataCadastro DATE
 --	);
 
 --CREATE TABLE Pedido(
 --	IdPedido INT PRIMARY KEY IDENTITY,
---	DataPedido DATE,
---	Status VARCHAR (20),
---	ValorTotal  DECIMAL (18,6),
---	IdCliente INT FOREIGN KEY REFERENCES Cliente(IdCliente)
+--	DataPedido DATE NOT NULL,
+--	Status VARCHAR (20) NOT NULL,
+--	ValorTotal  DECIMAL (18, 6),
+--	IdCliente INT FOREIGN KEY REFERENCES Cliente(IdCliente) NOT NULL
 --	);
 
 --CREATE TABLE Pagamento(
 --	IdPagamento INT PRIMARY KEY IDENTITY,
---	StatusPagamento VARCHAR (30),
---	FormaPagamento VARCHAR (20),
---	DataPagamento DATETIME,
---	IdPedido INT FOREIGN KEY REFERENCES Pedido(IdPedido)
+--	StatusPagamento VARCHAR (30) NOT NULL,
+--	FormaPagamento VARCHAR (20) NOT NULL,
+--	DataPagamento DATETIME NOT NULL,
+--	IdPedido INT FOREIGN KEY REFERENCES Pedido(IdPedido) NOT NULL
 --);
 
 --CREATE TABLE Produto(
 --	IdProduto INT PRIMARY KEY IDENTITY,
---	NomeProduto VARCHAR (150),
---	Descricao VARCHAR (100),
---	Preco DECIMAL (18,2),
---	EstoqueDisponivel INT,
---	CategoriaProduto VARCHAR (50),
+--	NomeProduto VARCHAR (150) NOT NULL,
+--	Descricao VARCHAR (255),
+--	Preco DECIMAL (18,6) NOT NULL,
+--	EstoqueDisponivel INT NOT NULL,
+--	CategoriaProduto VARCHAR (100) NOT NULL,
 --	Imagem VARCHAR (255)
 --);
 
 --CREATE TABLE ItemPedido(
 --	IdItemPedido INT PRIMARY KEY IDENTITY,
---	IdPedido INT FOREIGN KEY REFERENCES Pedido(IdPedido),
---	IdProduto INT FOREIGN KEY REFERENCES Produto(IdProduto),
---	Quantidade INT
+--	IdPedido INT FOREIGN KEY REFERENCES Pedido(IdPedido) NOT NULL,
+--	IdProduto INT FOREIGN KEY REFERENCES Produto(IdProduto) NOT NULL,
+--	Quantidade INT NOT NULL
 --);
 
 --DROP TABLE ItemPedido;

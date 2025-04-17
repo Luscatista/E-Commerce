@@ -2,8 +2,12 @@
 
 -- SELECT
 
-select * from Pedido
-select * from Produto
-select * from ItemPedido
 select * from Cliente
+
+select * from Pedido
+
 select * from Pagamento
+
+select * from Produto
+
+select * from ItemPedido
