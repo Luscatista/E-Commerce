@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "1b1f6fd8-e172-4f02-b557-3f5693e42794",
+		"name": "Projeto ECommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38752902"
+	},
+	"item": [
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7025/api/Produto",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"Produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscas por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7025/api/produto/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"produto",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProduto\": \"Placa de vídeo\",\r\n    \"descricao\": \"Placa de vídeo potente\",\r\n    \"preco\": 1200.00,\r\n    \"estoqueDisponivel\": 35,\r\n    \"categoriaProduto\": \"Informática\",\r\n    \"imagem\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7025/api/Produto",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"Produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProduto\": \"Placa de vídeo alterada\",\r\n    \"descricao\": \"Placa de vídeo potente alterada\",\r\n    \"preco\": 1810,\r\n    \"estoqueDisponivel\": 15,\r\n    \"categoriaProdut\": \"Informática alterada\",\r\n    \"imagem\": \"\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7025/api/produto/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"produto",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7025/api/produto/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"produto",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7025/api/cliente",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7025/api/cliente/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"cliente",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeCompleto\": \"Jeremias Campos\",\r\n    \"email\": \"jeremias@senai.br\",\r\n    \"telefone\": \"(11) 999991234\",\r\n    \"endereco\": \"Rua Marechal, 1200 - São Bernardo do Campo/SP\",\r\n    \"dataCadastro\": \"2025-08-11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7025/api/cliente",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nomeCompleto\": \"Jeremias Campos dos Reis\",\r\n        \"email\": \"jeremiaReiss@senai.br\",\r\n        \"telefone\": \"(11) 999912345\",\r\n        \"endereco\": \"Rua Marechal, 1210 - São Bernardo do Campo/SP\",\r\n        \"dataCadastro\": \"2025-08-12\",\r\n        \"Senha\": \"123senha123\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7025/api/cliente/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"cliente",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7025/api/cliente/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"cliente",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pagamento",
+			"item": [
+				{
+					"name": "Listar Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7025/api/pagamento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"pagamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7025/api/pagamento/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"pagamento",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"statusPagamento\": \"Pago\",\r\n    \"formaPagamento\": \"A vista no pix\",\r\n    \"dataPagamento\": \"2023-08-08T00:00:00\",\r\n    \"idPedido\": 2\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7025/api/pagamento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"pagamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"statusPagamento\": \"Pago\",\r\n    \"formaPagamento\": \"A vista no pix\",\r\n    \"dataPagamento\": \"2023-08-12T00:00:00\",\r\n    \"idPedido\": 3\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7025/api/pagamento/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"pagamento",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7025/api/pagamento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7025",
+							"path": [
+								"api",
+								"pagamento"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

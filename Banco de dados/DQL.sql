@@ -1,5 +1,7 @@
 ----	DQL Data Query Language
 
+--JWT SenaiSystem kw%!wZ6rzv9V9yCg9WvZbbJgvs7US8Go%h66E22d
+
 ---- SELECT
 
 --select * from Cliente
